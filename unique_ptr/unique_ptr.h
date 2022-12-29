@@ -23,8 +23,6 @@ public:
 
 public:
     pointer get() const noexcept;
-    Deleter& get_deleter() noexcept;
-    const Deleter& get_deleter() const noexcept;
     explicit operator bool() const noexcept;
 
 public:

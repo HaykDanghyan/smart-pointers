@@ -55,16 +55,6 @@ typename unique_ptr<T, Deleter>::pointer unique_ptr<T, Deleter>::get() const noe
 }
 
 template <typename T, typename Deleter>
-Deleter& unique_ptr<T, Deleter>::get_deleter() noexcept {
-    return Deleter::type;
-}
-
-template <typename T, typename Deleter>
-const Deleter& unique_ptr<T, Deleter>::get_deleter() const noexcept {
-    return Deleter::type;
-}
-
-template <typename T, typename Deleter>
 unique_ptr<T, Deleter>::operator bool() const noexcept {
     return get() != nullptr;
 }
